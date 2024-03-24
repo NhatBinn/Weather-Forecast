@@ -13,5 +13,5 @@
 2. Chạy lệnh `mvn spring-boot:run` để khởi động server backend.
 3. Server sẽ khởi chạy trên cổng mặc định là localhost:8080.
 
-##API mặc định của BE là localhost:8080/weather.
+##API mặc định của BE là localhost:8080/weather/forecast.
 
