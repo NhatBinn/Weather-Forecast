@@ -1,0 +1,203 @@
+/* Main Styles */
+
+.weather-dashboard {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: #ffffff6b;
+  background-color: #f1d6d6;
+  border-radius: 25px;
+}
+
+.text-city {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 400px;
+}
+
+/* Search Section */
+.search-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-section input,
+.search-section select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.search-section select {
+  width: 100px;
+  text-align: center;
+}
+
+.search-section button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 100px;
+  height: 40px;
+}
+
+.search-section button:hover {
+  background-color: #0c7bcd;
+}
+
+/* Weather Display */
+.weather-display {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.current-weather h2 {
+  color: #1e90ff;
+  margin-bottom: 0.5em;
+}
+
+.current-weather p {
+  font-size: 1.2em;
+  margin-bottom: 0.25em;
+}
+
+/* Forecast Styles */
+.forecast {
+  margin-top: 20px;
+}
+
+.forecast-day {
+  padding: 10px;
+  background: #e6e6e6;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.forecast h2 {
+  text-align: center;
+  color: #1e90ff;
+  font-size: 25px;
+  margin-bottom: 1em;
+}
+
+.forecast-day h3,
+.forecast-day p {
+  margin: 5px 0;
+}
+
+/* Error Message */
+.error-message {
+  color: #d8000c;
+  background-color: #ffbaba;
+  border: 1px solid #d8000c;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* History Styles */
+.weather-history {
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.weather-history h2 {
+  color: #1e90ff;
+  margin-bottom: 1em;
+}
+
+.history-entry {
+  background: #e6e6e6;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.history-entry > div {
+  margin-bottom: 0.25em;
+}
+
+/* Responsive Design */
+/* Global transitions for smoother effect */
+input,
+select,
+button,
+.forecast-day,
+.history-entry {
+  transition: all 0.3s ease;
+}
+
+.weather-history button {
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 120px;
+}
+
+.history-button {
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: #006eff;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 120px;
+}
+
+/* Improving the responsive design */
+@media (max-width: 768px) {
+  .search-section {
+    flex-direction: column;
+  }
+
+  .search-section * {
+    width: 100%;
+    margin: 5px 0; 
+  }
+}
+
+/* Adding hover effect for buttons */
+button:hover {
+  filter: brightness(110%);
+  transform: scale(1.05); 
+}
+
+/* Smooth display/hide for forecast and history entries */
+.forecast-day,
+.history-entry {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+}
